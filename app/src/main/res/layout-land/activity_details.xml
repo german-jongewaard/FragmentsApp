@@ -7,14 +7,14 @@
     android:orientation="horizontal"
     tools:context=".activities.MainActivity">
 
+
     <fragment
-        android:id="@+id/dataFragment"
-        android:name="dev.com.jongewaard.fragmentsapp.fragments.DataFragment"
+        android:id="@+id/detailsFragment"
+        android:name="dev.com.jongewaard.fragmentsapp.fragments.DetailsFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        tools:layout="@layout/fragment_data" />
-
+        tools:layout="@layout/fragment_details" />
 
 
 
