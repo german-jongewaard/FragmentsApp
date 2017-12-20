@@ -33,7 +33,7 @@ public class DetailsFragment extends Fragment {
         return view;
     }
 
-    private void renderText(String text) {
+    public void renderText(String text) {
 
         details.setText(text);
     }

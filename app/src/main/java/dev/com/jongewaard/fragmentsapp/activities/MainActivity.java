@@ -1,12 +1,11 @@
 package dev.com.jongewaard.fragmentsapp.activities;
 
-import android.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 
 import dev.com.jongewaard.fragmentsapp.R;
 import dev.com.jongewaard.fragmentsapp.fragments.DataFragment;
+import dev.com.jongewaard.fragmentsapp.fragments.DetailsFragment;
 
 public class MainActivity extends FragmentActivity implements DataFragment.DataListener {
 
@@ -18,9 +17,19 @@ public class MainActivity extends FragmentActivity implements DataFragment.DataL
 
     @Override
     public void sendData(String text) {
-        //Llamar al método renderizarTexto del DetailsFragment, pasando el texto
-        // que recibimos por el parámetro, en este mismo método.
+        /*
+        Llamar al método renderizarTexto del DetailsFragment, pasando el texto
+        que recibimos por el parámetro, en este mismo método.
+        */
+        //aqui creo una instancia del fragmento al que quiero comunicarme
+            /*El findFragmentById me trae un Fragment GENERICO por eso le hago el Casting
+             *con DetailsFragments
+             *No creo un fragment, lo encuentro, lo traigo con el findFragmentById
+             * */
+        DetailsFragment detailsFragment = (DetailsFragment)getSupportFragmentManager()
+                .findFragmentById(R.id.detailsFragment);
 
+        detailsFragment.renderText(text);
 
     }
 }
