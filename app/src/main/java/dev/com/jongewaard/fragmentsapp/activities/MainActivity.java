@@ -6,12 +6,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import dev.com.jongewaard.fragmentsapp.R;
+import dev.com.jongewaard.fragmentsapp.fragments.DataFragment;
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends FragmentActivity implements DataFragment.DataListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    @Override
+    public void sendData(String text) {
+
     }
 }

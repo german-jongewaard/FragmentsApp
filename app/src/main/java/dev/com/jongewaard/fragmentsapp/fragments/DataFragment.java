@@ -65,7 +65,7 @@ public class DataFragment extends Fragment {
 
     //método que comunica
     public interface DataListener{
-        void sendData();
+        void sendData(String text);
     }
 
 }
