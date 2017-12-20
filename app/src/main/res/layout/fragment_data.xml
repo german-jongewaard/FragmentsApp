@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@color/backgroundFragmentUno"
     tools:context="dev.com.jongewaard.fragmentsapp.fragments.DataFragment">
 
     <RelativeLayout
@@ -11,6 +11,7 @@
 
         <EditText
             android:id="@+id/editTextData"
+            android:textColor="@color/textoFragmentUno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
