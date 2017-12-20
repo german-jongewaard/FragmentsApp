@@ -18,6 +18,9 @@ public class MainActivity extends FragmentActivity implements DataFragment.DataL
 
     @Override
     public void sendData(String text) {
+        //Llamar al método renderizarTexto del DetailsFragment, pasando el texto
+        // que recibimos por el parámetro, en este mismo método.
+
 
     }
 }

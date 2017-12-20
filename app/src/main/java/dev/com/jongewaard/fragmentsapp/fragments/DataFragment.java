@@ -53,6 +53,9 @@ public class DataFragment extends Fragment {
         textData = (EditText)view.findViewById(R.id.editTextData);
         btnSend = (Button)view.findViewById(R.id.buttonSend);
 
+        /* Una vez que le haga click al boton, ejecuto lo que se haya definido en el
+            método delMainActivity public void sendData(String text)
+        */
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,6 +63,7 @@ public class DataFragment extends Fragment {
                 en el textData que tengo arriba
                 String textToSend = textData.getText().toString();
                 callback.sendData(textToSend);
+                mandando el texto que hayamos recogido de la linea de abajo
             */
                 sendText(textData.getText().toString());
             }

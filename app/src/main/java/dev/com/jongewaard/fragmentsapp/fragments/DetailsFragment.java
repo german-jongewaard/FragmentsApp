@@ -7,10 +7,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import dev.com.jongewaard.fragmentsapp.R;
 
 public class DetailsFragment extends Fragment {
+
+    private TextView details;
 
     public DetailsFragment() {
         // Required empty public constructor
@@ -24,10 +27,15 @@ public class DetailsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_details, container, false);
 
 
-
+        details = (TextView) view.findViewById(R.id.textViewDetails);
 
         // Inflate the layout for this fragment
         return view;
+    }
+
+    private void renderText(String text) {
+
+        details.setText(text);
     }
 
 
