@@ -52,7 +52,7 @@ public class DataFragment extends Fragment {
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendText("");
+                sendText(textData.getText().toString());
             }
         });
 
@@ -60,7 +60,7 @@ public class DataFragment extends Fragment {
     }
 
     private void sendText(String text) {
-
+        callback.sendData(text);
     }
 
     //método que comunica
