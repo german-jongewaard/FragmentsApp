@@ -24,7 +24,11 @@ public class DataFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /* */
+
+    /* Primer paso del ciclo de vida del Fragment
+     * Traemos del MainActivity el "context" como ha sido implementado ese Listener
+      * y lo traigo al callback. Lo que implemente en el método: public void sendData(String text)
+      * del MainActivity lo traigo al callback del onAttach*/
 
     @Override
     public void onAttach(Context context) {
@@ -52,6 +56,11 @@ public class DataFragment extends Fragment {
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+             /* Otra forma de hacerlo seria así. (poniendo final
+                en el textData que tengo arriba
+                String textToSend = textData.getText().toString();
+                callback.sendData(textToSend);
+            */
                 sendText(textData.getText().toString());
             }
         });
@@ -59,13 +68,18 @@ public class DataFragment extends Fragment {
         return view;
     }
 
+    //Otra forma de hacerlo esta dentro del onClick
     private void sendText(String text) {
         callback.sendData(text);
     }
 
-    //método que comunica
+    //método que comunica (Interfaz declarada que tiene una accion
+    // que es enviar datosel cual recibe un texto, y su accion
+    // sera realizada en otro sitio.
     public interface DataListener{
         void sendData(String text);
     }
+
+
 
 }
