@@ -24,14 +24,17 @@ public class DataFragment extends Fragment {
         // Required empty public constructor
     }
 
+    /* */
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         try {
-
+            callback = (DataListener) context;
         }catch (Exception e){
             //el Log es para mostrarme info en el "Logcat"
             //Log.i(e.toString());
+            throw new ClassCastException(context.toString() + "Should implement DataListener");
         }
     }
 
