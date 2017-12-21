@@ -20,32 +20,42 @@ public class MainActivity extends FragmentActivity implements DataFragment.DataL
         setMultiPanel();
     }
 
+
+    public void onListClick(Mail mail){
+
+        if(isMultiPanel) {
+            DetailsFragment detailsFragment = (DetailsFragment)getSupportFragmentManager()
+                    .findFragmentById(R.id.fragmentDetailsMail);
+            detailsFragment.renderText(mail);
+        } else {
+            Intent intent = new Intent(this, DetailsActivity.class);
+            intent.putExtra("subject", mail.getSubject());
+            intent.putExtra("message", mail.getMessage());
+            intent.putExtra("senderName", mail.getSenderName());
+            startActivity(intent);
+        }
+
+    }
+ /*
     @Override
     public void sendData(String text) {
 
          if(isMultiPanel){
-/* Llamar al método renderizarTexto del DetailsFragment, pasando el texto que recibimos por el
-parámetro, en este mismo método. */
+ Llamar al método renderizarTexto del DetailsFragment, pasando el texto que recibimos por el
+parámetro, en este mismo método.
 //aqui creo una instancia del fragmento al que quiero comunicarme
-/* El findFragmentById me trae un Fragment GENERICO por eso le hago el Casting con DetailsFragments
-No creo un fragment, lo encuentro, lo traigo con el findFragmentById */
+  El findFragmentById me trae un Fragment GENERICO por eso le hago el Casting con DetailsFragments
+No creo un fragment, lo encuentro, lo traigo con el findFragmentById
              DetailsFragment detailsFragment = (DetailsFragment)getSupportFragmentManager()
                      .findFragmentById(R.id.detailsFragment);
              detailsFragment.renderText(text);
          } else {
-
              Intent intent = new Intent(this, DetailsActivity.class);
              intent.putExtra("text", text);
              startActivity(intent);
          }
-
-
-
-
-
-
     }
-
+*/
     private void setMultiPanel(){
             //Si tengo dos Fragment va a dar verdadero, si solo tiene uno va a dar falso
         isMultiPanel = (getSupportFragmentManager().findFragmentById(R.id.detailsFragment) != null);
