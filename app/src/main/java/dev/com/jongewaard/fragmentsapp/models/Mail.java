@@ -1,5 +1,7 @@
 package dev.com.jongewaard.fragmentsapp.models;
 
+import dev.com.jongewaard.fragmentsapp.Util;
+
 /**
  * Created by german on 21-12-17.
  */
@@ -14,7 +16,7 @@ public class Mail {
     public Mail(String subject, String message, String senderName, String color) {
         Subject = subject;
         Message = message;
-        SenderName = senderNa   me;
+        SenderName = senderName;
         this.color = Util.getRandomColor();
     }
 
