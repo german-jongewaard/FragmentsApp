@@ -4,16 +4,15 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MainActivity">
+    tools:context=".MainActivity">
 
 
     <fragment
         android:id="@+id/fragmentListMail"
-        android:name=".fragments.ListFragment"
+        android:name="com.alejandro.seccion_06_fragments_lab.Fragments.ListFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="100"
         tools:layout="@layout/fragment_list" />
-
 
 </LinearLayout>

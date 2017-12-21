@@ -1,6 +1,6 @@
 package dev.com.jongewaard.fragmentsapp.models;
 
-import dev.com.jongewaard.fragmentsapp.Util;
+import dev.com.jongewaard.fragmentsapp.utils.Util;
 
 /**
  * Created by german on 21-12-17.

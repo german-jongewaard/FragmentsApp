@@ -1,4 +1,4 @@
-package dev.com.jongewaard.fragmentsapp;
+package dev.com.jongewaard.fragmentsapp.utils;
 
 import java.util.ArrayList;
 import java.util.List;

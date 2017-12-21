@@ -5,10 +5,14 @@ import android.os.Bundle;
 
 import dev.com.jongewaard.fragmentsapp.R;
 import dev.com.jongewaard.fragmentsapp.fragments.DetailsFragment;
+import dev.com.jongewaard.fragmentsapp.models.Mail;
 
 public class DetailsActivity extends AppCompatActivity {
 
-    private String text;
+    private String subject;
+    private String message;
+    private String sender;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,12 +20,16 @@ public class DetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_details);
 
         if(getIntent().getExtras() != null){
-            text = getIntent().getStringExtra("text");
+            subject = getIntent().getStringExtra("subject");
+            message = getIntent().getStringExtra("message");
+            sender = getIntent().getStringExtra("sender");
         }
 
+        Mail mail = new Mail(subject, message, sender);
+
         DetailsFragment detailsFragment = (DetailsFragment)getSupportFragmentManager()
-                .findFragmentById(R.id.detailsFragment);
-        detailsFragment.renderText(text);
+                .findFragmentById(R.id.fragmentsDetailsMail);
+        detailsFragment.renderText(mail);
 
     }
 }
