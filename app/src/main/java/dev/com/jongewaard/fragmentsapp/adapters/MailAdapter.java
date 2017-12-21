@@ -9,14 +9,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import java.util.List;
-
-import dev.com.jongewaard.fragmentsapp.R;
 import dev.com.jongewaard.fragmentsapp.models.Mail;
+import dev.com.jongewaard.fragmentsapp.R;
 
-/**
- * Created by german on 21-12-17.
- */
+import java.util.List;
 
 
 public class MailAdapter extends BaseAdapter {
@@ -101,3 +97,4 @@ public class MailAdapter extends BaseAdapter {
         private TextView message;
         private TextView sender;
     }
+}
