@@ -1,7 +1,3 @@
 <resources>
-    <string name="app_name">FragmentsApp</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="data_fragment">Hola desde el fragmento Data</string>
-    <string name="details_fragment">Hola desde el fragmento Details</string>
+    <string name="app_name">MyMail</string>
 </resources>
