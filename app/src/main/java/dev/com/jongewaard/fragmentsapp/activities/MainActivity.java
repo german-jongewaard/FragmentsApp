@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentActivity;
 import dev.com.jongewaard.fragmentsapp.R;
 import dev.com.jongewaard.fragmentsapp.fragments.DataFragment;
 import dev.com.jongewaard.fragmentsapp.fragments.DetailsFragment;
+import dev.com.jongewaard.fragmentsapp.models.Mail;
 
 public class MainActivity extends FragmentActivity implements DataFragment.DataListener {
 
