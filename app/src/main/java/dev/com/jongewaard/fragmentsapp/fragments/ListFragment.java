@@ -16,6 +16,9 @@ import dev.com.jongewaard.fragmentsapp.utils.Util;
 
 import java.util.List;
 
+/**
+ * Created by german on 21-12-17.
+ */
 
 public class ListFragment extends Fragment {
 

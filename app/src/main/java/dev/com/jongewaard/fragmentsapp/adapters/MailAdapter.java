@@ -14,6 +14,9 @@ import dev.com.jongewaard.fragmentsapp.R;
 
 import java.util.List;
 
+/**
+ * Created by german on 21-12-17.
+ */
 
 public class MailAdapter extends BaseAdapter {
 

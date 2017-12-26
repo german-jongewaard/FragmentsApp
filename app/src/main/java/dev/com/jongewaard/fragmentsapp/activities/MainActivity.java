@@ -9,6 +9,10 @@ import dev.com.jongewaard.fragmentsapp.fragments.DetailsFragment;
 import dev.com.jongewaard.fragmentsapp.fragments.ListFragment;
 import dev.com.jongewaard.fragmentsapp.models.Mail;
 
+/**
+ * Created by german on 21-12-17.
+ */
+
 public class MainActivity extends AppCompatActivity implements ListFragment.OnFragmentInteractionListener {
 
 

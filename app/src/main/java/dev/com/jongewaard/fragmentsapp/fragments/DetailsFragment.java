@@ -11,6 +11,10 @@ import android.widget.TextView;
 import dev.com.jongewaard.fragmentsapp.R;
 import dev.com.jongewaard.fragmentsapp.models.Mail;
 
+/**
+ * Created by german on 21-12-17.
+ */
+
 public class DetailsFragment extends Fragment {
 
     private TextView textViewSubject;
