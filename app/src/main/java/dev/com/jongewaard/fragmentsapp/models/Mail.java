@@ -13,7 +13,7 @@ public class Mail {
     private String SenderName;
     private String color;
 
-    public Mail(String subject, String message, String senderName, String color) {
+    public Mail(String subject, String message, String senderName) {
         Subject = subject;
         Message = message;
         SenderName = senderName;
