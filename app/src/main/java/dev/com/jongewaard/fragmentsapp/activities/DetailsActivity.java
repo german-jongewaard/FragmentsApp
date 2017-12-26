@@ -32,7 +32,8 @@ public class DetailsActivity extends AppCompatActivity {
 
         Mail mail = new Mail(subject, message, sender);
 
-        DetailsFragment detailsFragment = (DetailsFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentDetailsMail);
+        DetailsFragment detailsFragment = (DetailsFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.fragmentDetailsMail);
         detailsFragment.renderMail(mail);
 
     }
